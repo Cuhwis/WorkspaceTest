@@ -18,9 +18,13 @@ class AlarmClock
     {
         return snoozeInterval;
     }
-
+    // TODO: add validation code to enforce range of values 1-59
     public void setSnoozeInterval(int snoozeInterval)
     {
+        if (snoozeInterval < 0 || snoozeInterval > 59)
+        {
+            snoozeInterval = this.snoozeInterval;
+        }
         this.snoozeInterval = snoozeInterval;
     }
 }
